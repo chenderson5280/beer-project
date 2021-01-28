@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Righteous&display=swap");
+
+.App {
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.mainHeader {
+  background-image: url("./otherPicture.jpeg");
+  background-size: cover;
+  height: 230px;
+  font-family: "Righteous", cursive;
+  width: 100vw;
+  background-repeat: no-repeat;
+  font-size: 50px;
+  text-shadow: -1px 1px 2px rgb(199, 169, 0);
+  box-shadow: honeydew;
+}
+
+.beerImage {
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+}
+.wholeCard {
+  flex-direction: column;
+  width: 300px;
+  height: 400px;
+  box-shadow: 0 20px 20px -10px gray;
+  padding: 15px;
+  font-family: "Lobster", cursive;
+  font-weight: 0.5;
+  background-color: khaki;
+  margin: 7px;
+  border-radius: 30px;
+}
+.BeerCollection {
+  display: flex;
+  flex-flow: row wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  /* margin-left: 5; */
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
