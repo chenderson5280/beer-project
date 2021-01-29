@@ -19,6 +19,14 @@
   box-shadow: honeydew;
 }
 
+.search-by-name-group {
+  font-family: "Righteous", cursive;
+  text-align: left;
+  margin-left: 60px;
+  font-size: 2rem;
+  text-shadow: -1px 1px 2px rgb(208, 125, 0)
+}
+
 .beerImage {
   width: 70%;
   height: 70%;
@@ -32,9 +40,12 @@
   padding: 15px;
   font-family: "Lobster", cursive;
   font-weight: 0.5;
-  background-color: khaki;
+  background-color: rgb(252, 248, 214);
   margin: 7px;
   border-radius: 30px;
+}
+.beerTagLine {
+  text-decoration: underline;
 }
 .BeerCollection {
   display: flex;

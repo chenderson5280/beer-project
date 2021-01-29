@@ -2,8 +2,7 @@ import React from 'react';
 
 const BeerCard = (props) => {
     return (
-        <div className='wholeCard'>
-
+        <div className='wholeCard' key={props.eachBeer.id} onClick={() => props.handleClick(props.eachBeer)}>
             <div className='heading'>
                 <div className='beerName'>
                     {props.eachBeer.name}

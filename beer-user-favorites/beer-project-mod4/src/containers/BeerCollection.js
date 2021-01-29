@@ -3,11 +3,12 @@ import BeerCard from '../components/BeerCard.js';
 
 class BeerCollection extends Component {
 
-    showBeers = () => this.props.beers.map( eachBeer => <BeerCard key={eachBeer.id} eachBeer={eachBeer}/>)
+    showBeers = () => this.props.beers.map( eachBeer => <BeerCard key={eachBeer.id} eachBeer={eachBeer} handleClick={this.props.handleClick} />)
 
     render(){
         return(
             <div className='BeerCollection'>
+
                 {this.showBeers()}
             </div>
         );
