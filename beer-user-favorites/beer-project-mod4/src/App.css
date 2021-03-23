@@ -55,6 +55,11 @@
   /* margin-left: 5; */
 }
 
+.wholePopUp {
+  font-family: "Righteous", cursive;
+  
+}
+
 .sticky {
   position: fixed;
   top: 0;

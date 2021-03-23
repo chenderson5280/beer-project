@@ -2,7 +2,7 @@ import React from 'react';
 
 const BeerCard = (props) => {
     return (
-        <div className='wholeCard' key={props.eachBeer.id} onClick={() => props.handleClick(props.eachBeer)}>
+        <div className='wholeCard' key={props.eachBeer.id} onClick={() => props.collectedBeer(props.eachBeer)}>
             <div className='heading'>
                 <div className='beerName'>
                     {props.eachBeer.name}
@@ -13,7 +13,7 @@ const BeerCard = (props) => {
                 </div>
             </div>
 
-            <img  className='beerImage' src={props.eachBeer.image} alt={props.eachBeer.name}></img>
+            <img  className='beerImage' src={props.eachBeer.image_url} alt={props.eachBeer.name}></img>
             
             <div className='beerTagLine'>
                 {props.eachBeer.tagline}

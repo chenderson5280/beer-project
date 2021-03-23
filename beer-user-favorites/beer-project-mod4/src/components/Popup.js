@@ -5,9 +5,9 @@ class Popup extends Component {
     render(){
         return(
             <div className='wholePopUp'>
-                <p className='popUpDescription'> </p>
+                <p className='popUpDescription'> {this.props.collectedBeer.description}</p>
                 <div className='popUpFood'>
-                    <html> Click this</html>
+                    <html> {this.props.collectedBeer.food_pairing}</html>
                 </div>
             </div>
         )

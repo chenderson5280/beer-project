@@ -9,6 +9,7 @@ class App extends Component {
     state = {
     beers: [],
     name: "",
+    popUpBeer: "",
     };
 
     componentDidMount() {
@@ -16,9 +17,9 @@ class App extends Component {
     }
 
     getBeers() {
-    fetch("http://localhost:3000/beers")
+    fetch("https://api.punkapi.com/v2/beers")
         .then((response) => response.json())
-        .then((results) => this.setState({ beers: results.beers }))
+        .then((results) => this.setState({ beers: results }))
         .then(this.activateSticky);
     }
 
@@ -37,8 +38,10 @@ class App extends Component {
     }
     }
 
-    handleClick = (eachBeer) => {
-        console.log(eachBeer)
+    collectedBeer = (eachBeer) => {
+        console.log(eachBeer.name)
+        this.setState({popUpBeer : eachBeer})
+        // return eachBeer
         // const popUpBeer = event
     }
 
@@ -56,15 +59,15 @@ class App extends Component {
     };
 
     render() {
-        const { name } = this.state;
+        const { name, popUpBeer } = this.state;
         return (
         <div className="App">
             <div className="mainHeader" id="mainHeader">
             Fucking love IPAs
         </div>
         <Filter name={name} handleChange={this.handleChange} />
-        <Popup />
-        <BeerCollection beers={this.filteredBeers()} handleClick={this.handleClick} />
+        <Popup collectedBeer={ popUpBeer } />
+        <BeerCollection beers={this.filteredBeers()} collectedBeer={this.collectedBeer} />
         </div>
         );
     }
